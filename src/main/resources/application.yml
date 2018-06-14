@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: user-DB-Server
+server:
+  port: 8080
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8762/eureka/
+  instance:
+    hostname: localhost
+    
+      
+      
