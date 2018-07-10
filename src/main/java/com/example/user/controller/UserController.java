@@ -4,6 +4,8 @@ import java.net.URI;
 import java.util.List;
 import java.util.Optional;
 
+import javax.sql.DataSource;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
@@ -20,12 +22,26 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.example.user.model.User;
 import com.example.user.repository.UserRepository;
-@RefreshScope
+//@RefreshScope
 @RestController
 @RequestMapping("/user/db")
 public class UserController {
 
+
+/*	@Value("${spring.datasource.driver-class-name}")
+	private String driverClassName;
+	@Value("${spring.datasource.url}")
+	private String url;
+	@Value("${spring.datasource.username}")
+	private String userName;
+	@Value("${spring.datasource.password}")
+	private String password;
+	@Autowired
+	private DataSource dataSource;
 	
+	*/
+
+
 
 	@Autowired
 	private UserRepository userRepository;
